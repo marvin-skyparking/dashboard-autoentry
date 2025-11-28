@@ -7,7 +7,7 @@ services:
       GF_SECURITY_ADMIN_USER: admin
       GF_SECURITY_ADMIN_PASSWORD: admin123
     ports:
-      - "7990:9000"
+      - "7501:7501"
     volumes:
       - autoentry-dashboards:/var/lib/grafana
 
