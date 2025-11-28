@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  grafana:
+    image: grafana/grafana:latest
+    container_name: autoentry-dashboards
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin123
+    ports:
+      - "8958:9000"
+    volumes:
+      - autoentry-dashboards:/var/lib/grafana
+
+volumes:
+  autoentry-dashboards:
