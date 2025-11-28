@@ -6,6 +6,11 @@ services:
     environment:
       GF_SECURITY_ADMIN_USER: admin
       GF_SECURITY_ADMIN_PASSWORD: admin123
+      GF_SERVER_ROOT_URL: https://dashboard-autoentry.skyparking.site/
+      GF_SERVER_DOMAIN: dashboard-autoentry.skyparking.site
+      # Optional: allow anonymous viewers
+      # GF_AUTH_ANONYMOUS_ENABLED: "true"
+      # GF_AUTH_ANONYMOUS_ORG_ROLE: Viewer
     ports:
       - "7501:3000"
     volumes:
