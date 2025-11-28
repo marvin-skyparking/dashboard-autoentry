@@ -11,10 +11,14 @@ services:
       # Optional: allow anonymous viewers
       GF_AUTH_ANONYMOUS_ENABLED: "true"
       GF_AUTH_ANONYMOUS_ORG_ROLE: Viewer
+
+      GF_BRANDING_LOGO: /var/lib/grafana/custom/logo.png
+      GF_BRANDING_FAVICON: /var/lib/grafana/custom/favicon.ico
     ports:
       - "7501:3000"
     volumes:
       - autoentry-dashboards:/var/lib/grafana
+      - ./custom:/var/lib/grafana/custom
 
 volumes:
   autoentry-dashboards:
